@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MyserviceService} from './myservice.service';
+import { FormGroup, FormControl, Validators} from '@angular/forms' 
+import { formControlBinding } from '@angular/forms/src/directives/ng_model';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +12,8 @@ export class AppComponent {
   title = 'Angular 7 Project $$';
   todaydate;
   componentproperty;
+  emailid;
+  formdata;
   public persondata =[];
   constructor(private myservice: MyserviceService){}
 
@@ -22,9 +26,22 @@ export class AppComponent {
       this.persondata = Array.from(Object.keys(data),k=>data[k]);
       console.log(this.persondata);
     });
-
+    this.formdata = new FormGroup({
+      emailid: new FormControl("",Validators.compose([
+        Validators.required,
+        Validators.pattern("[^@]*@[^@]*")
+      ])),
+      passwd: new FormControl("",this.passwordValidate)
+    });
   }
-
+  passwordValidate(formcontrol){
+    if(formcontrol.value.length < 5){
+      return {"passwd": true };
+    }
+  }
+  onClickSubmit(data){
+    this.emailid=data.emailid;
+  }
   // jsonval={ name:'Gurunoor',age :'21', address:{a1:'blank',a2:'VikasPuri'}};
 
   // months = ["January", "February", "March", "April", "May",
