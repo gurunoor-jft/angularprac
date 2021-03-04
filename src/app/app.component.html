@@ -3,7 +3,8 @@
     <a routerLink="/home">Home</a>
     <a routerLink="/contactus">Contact Us</a>
   </nav>
-  <h1>UpperCase Value</h1>
+  {{todaydate}}
+  <!-- <h1>UpperCase Value</h1>
      <b>Welcome to {{ title | uppercase }}.</b><br>
    <h1>Lower Case</h1> 
     <b> {{ title | lowercase}}</b><br>
@@ -12,7 +13,7 @@
     <b>{{6589.23 | currency: "USD":true }}</b><br>
     <b>{{6589.23 | currency: "INR" }}</b><br>
     <h1>Data Pipe</h1>
-    <b>{{todaydate | date:'d/m/y'}}</b><br>
+    <b>{{todaydate}}</b><br>
     <b>{{todaydate | date:'shortTime'}}</b><br>
     <h1>Decimal Pipe</h1>
     <b>{{421.123123132 | number:'2.3-3' }}</b>
@@ -40,7 +41,7 @@
   <ng-template #condition2>Condition2 is invalid from template</ng-template>
 </div>  
 <div style="text-align: center;">
-<span changeText >Welcome to {{ title | uppercase }}.</span></div>
+<span changeText >Welcome to {{ title | uppercase }}.</span></div> -->
 
 <app-new-cmp></app-new-cmp>
 <router-outlet></router-outlet>
