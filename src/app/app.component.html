@@ -46,7 +46,12 @@
 
 <app-new-cmp></app-new-cmp>
 <router-outlet></router-outlet>
-<button (click)="myClickFunction($event)">Click Me</button>
+<div>
+  <button (click)="animate()">Click Me</button>
+  <div [@myanimation] = "state" class="rotate">
+    <img src="image/img.png" width="100" height="100">
+  </div>
+</div>
 <h3>Users Data</h3>
 <ul>
   <li *ngFor="let item of persondata">

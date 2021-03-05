@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule} from '@angular/forms';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     ReactiveFormsModule,
     ScrollingModule,
     DragDropModule,
+    BrowserAnimationsModule
   ],
   providers: [MyserviceService],
   bootstrap: [AppComponent]
