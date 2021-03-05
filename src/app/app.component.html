@@ -61,23 +61,19 @@
   <br>
   <input type = "Submit" value= "submit">
 </form> -->
-<h3>Angular 7 - Virtual Scrolling</h3>
-<cdk-virtual-scroll-viewport [itemSize]="3">
-  <table>
-    <thead>
-      <tr>
-        <td>ID</td>
-        <td>ThumbNail</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *cdkVirtualFor="let album of albumdetails">
-        <td>{{ album.id }}</td>
-        <td><img src="{{ album.thumbnailUrl }}" width="100" height="100" /></td>
-      </tr>
-    </tbody>
-  </table>
-</cdk-virtual-scroll-viewport>
+<h3>Angular 7 - Drag and Drop Module</h3>
+<div
+cdkDropList
+#personList="cdkDropList"
+[cdkDropListData]="albumdetails"
+[cdkDropListConnectedTo]="[userlist]"
+class="example-list"
+(cdkDropListDropped)="onDrop($event)"
+>
+<div *ngFor="let item of albumdetails; let i = index" class="divlayout"
+cdkDrag>
+{{item.name}}
+</div>
 
 <h3>Model Driven Form With Validation</h3>
 <div>

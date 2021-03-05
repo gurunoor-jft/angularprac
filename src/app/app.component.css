@@ -37,3 +37,10 @@ input[type=text], input[type=password] {
         cdk-virtual-scroll-viewport {
         height: 10000px;
         }
+        .divlayout{
+            width: 40%;
+            background-color: #ccc;
+            margin-bottom: 5px;
+            padding: 10px 10px;
+            border: 3px solid #73AD21;
+        }
