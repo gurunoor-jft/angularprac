@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule} from '@angular/forms';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+
 @NgModule({
   declarations: [
     SqrtPipe,
@@ -26,7 +27,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     FormsModule,
     ReactiveFormsModule,
     ScrollingModule,
-    DragDropModule
+    DragDropModule,
   ],
   providers: [MyserviceService],
   bootstrap: [AppComponent]
