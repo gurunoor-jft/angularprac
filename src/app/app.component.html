@@ -108,3 +108,21 @@ cdkDrag>
   </form>
 </div>
 <p>Email entered is : {{ emailid }}</p>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu = "matMenu">
+  <button mat-menu-item>File
+  </button>
+  <button mat-menu-item>Save As
+  </button>
+  
+</mat-menu>
+<mat-sidenav-container class="example-container" fullscreen>
+  <mat-sidenav #sidenav class= "example-sidenav">
+    Angualr 7
+  </mat-sidenav>
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="sidenav.open()">
+      Open SideNav
+    </button>
+  </div>
+</mat-sidenav-container>
